@@ -1,0 +1,35 @@
+2023-11-13 00:11:53,722: root: INFO: BuyHold : Executing the initialize lifecycle method
+2023-11-13 00:11:54,533: root: INFO: Current backtesting datetime 2022-01-03 08:30:00-05:00
+2023-11-13 00:11:54,534: root: INFO: BuyHold : Executing the before_market_opens lifecycle method
+2023-11-13 00:11:54,534: root: INFO: Current backtesting datetime 2022-01-03 09:30:00-05:00
+2023-11-13 00:11:54,534: root: INFO: BuyHold : Executing the before_starting_trading lifecycle method
+2023-11-13 00:11:54,535: root: INFO: [34mBuyHold : Executing the on_trading_iteration lifecycle method at 2023-11-13 00:11:54[0m
+2023-11-13 00:11:54,536: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2023-11-13 00:11:54,539: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2023-11-13 00:11:54,539: root: ERROR: create_order() got an unexpected keyword argument 'pgrp'
+2023-11-13 00:11:54,540: root: ERROR: Traceback (most recent call last):
+  File "/home/gene/trading_bot/venv/lib/python3.8/site-packages/lumibot/strategies/strategy_executor.py", line 799, in run
+    self._run_trading_session()
+  File "/home/gene/trading_bot/venv/lib/python3.8/site-packages/lumibot/strategies/strategy_executor.py", line 750, in _run_trading_session
+    self._on_trading_iteration()
+  File "/home/gene/trading_bot/venv/lib/python3.8/site-packages/lumibot/strategies/strategy_executor.py", line 275, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "/home/gene/trading_bot/venv/lib/python3.8/site-packages/lumibot/strategies/strategy_executor.py", line 299, in func_output
+    result = func_input(self, *args, **kwargs)
+  File "/home/gene/trading_bot/venv/lib/python3.8/site-packages/lumibot/strategies/strategy_executor.py", line 88, in func_output
+    return func_input(self, *args, **kwargs)
+  File "/home/gene/trading_bot/venv/lib/python3.8/site-packages/lumibot/strategies/strategy_executor.py", line 374, in _on_trading_iteration
+    on_trading_iteration()
+  File "/home/gene/trading_bot/venv/lib/python3.8/site-packages/lumibot/tools/decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+  File "/home/gene/trading_bot/venv/lib/python3.8/site-packages/lumibot/tools/decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+  File "/home/gene/trading_bot/buy_hold.py", line 30, in on_trading_iteration
+    order = self.create_order(symbol, quantity, "buy", pgrp=pgrp)
+TypeError: create_order() got an unexpected keyword argument 'pgrp'
+
+2023-11-13 00:11:54,540: root: INFO: BuyHold : Executing the on_bot_crash event method
+2023-11-13 00:11:54,541: root: INFO: Backtesting finished
+2023-11-13 00:11:54,542: root: WARNING: Cannot plot returns because the strategy returns are missing
+2023-11-13 00:11:54,575: root: WARNING: Cannot create a tearsheet because the strategy returns are missing
+2023-11-13 00:11:54,575: backtest_stats: INFO: Backtest took 0:00:00.854579 for a speed of 0.000

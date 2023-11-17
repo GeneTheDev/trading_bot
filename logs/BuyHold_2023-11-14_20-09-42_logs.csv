@@ -1,0 +1,8 @@
+2023-11-14 20:09:42,714: root: INFO: BuyHold : Executing the initialize lifecycle method
+2023-11-14 20:09:44,204: root: INFO: Current backtesting datetime 2022-01-03 08:30:00-05:00
+2023-11-14 20:09:44,206: root: INFO: BuyHold : Executing the before_market_opens lifecycle method
+2023-11-14 20:09:44,207: root: INFO: Current backtesting datetime 2022-01-03 09:30:00-05:00
+2023-11-14 20:09:44,207: root: INFO: BuyHold : Executing the before_starting_trading lifecycle method
+2023-11-14 20:09:44,209: root: INFO: [34mBuyHold : Executing the on_trading_iteration lifecycle method at 2023-11-14 20:09:44[0m
+2023-11-14 20:09:44,210: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2023-11-14 20:09:44,215: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
